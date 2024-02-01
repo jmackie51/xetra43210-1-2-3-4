@@ -61,13 +61,11 @@ class XetraETL():
     """
     Reads the Xetra data, transforms and writes the transformed to target
     """
-
     def __init__(self, s3_bucket_src: S3BucketConnector,
                  s3_bucket_trg: S3BucketConnector, meta_key: str,
                  src_args: XetraSourceConfig, trg_args: XetraTargetConfig):
         """
         Constructor for XetraTransformer
-
         :param s3_bucket_src: connection to source S3 bucket
         :param s3_bucket_trg: connection to target S3 bucket
         :param meta_key: used as self.meta_key -> key of meta file
